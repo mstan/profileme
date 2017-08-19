@@ -8,6 +8,7 @@
 */
 var mysql = require('mysql');
 var dbConnection = require('./lib/database/mysql.js').returnConnection;
+var dbHeartbeat = require('./lib/database/mysql.js').heartbeat;
 
 var express = require('express');
 var ejs = require('ejs');
@@ -43,8 +44,10 @@ var startServer = () => {
                 reject(err);
             } else {
                 resolve();
+                dbHeartbeat(); // function to run at set intervals to prevent db disconnect
             }
-        })
+        });
+
     })
     /*
         Passport Time!

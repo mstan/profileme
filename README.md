@@ -1,5 +1,9 @@
 # ProfileMe
 
+## Demo
+
+Demo it at http://profileme.1379.tech
+
 ## Overview
 
 ProfileMe is a simple demo app that primarily focuses on the backend. The project was intended to originally be strictly an API, but has since had some simple views built into it for demonstration purposes.
